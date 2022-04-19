@@ -13,6 +13,7 @@
 
 .books-container {
   border: solid 3px black;
+  margin: 1rem;
 }
 
 .book-wraper{
@@ -24,12 +25,29 @@
 .book-text {
   display: flex;
   gap: 5px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.book-div:nth-child(odd) {
+  background: #dddddd;
 }
 
 .new-book-title {
   text-align: center;
   font-family: 'Roboto', sans-serif;
   margin: 20px 0;
+}
+
+.remove-btn {
+  padding: 5px;
+  box-shadow: 3px 3px black;
+}
+
+.section-devider {
+  width: 15%;
+  margin: auto;
+  border: 2px solid #0a0a0a;
+  border-radius: 3px;
 }
 
 .add-book-form {

@@ -43,17 +43,17 @@ const render = () => {
     const bookBy = document.createElement('p');
     const bookAuthor = document.createElement('p');
     const removeBookBtn = document.createElement('button');
-    const lineBreak = document.createElement('hr');
     bookDiv.className = 'book-div';
     bookWraper.className = 'book-wraper'
     bookText.className = 'book-text';
-    bookTitle.textContent = booksArr[i].title;
+    removeBookBtn.className = 'remove-btn';
+    bookTitle.textContent = `"${booksArr[i].title}"`;
     bookBy.textContent = 'by'
     bookAuthor.textContent = booksArr[i].author;
     removeBookBtn.textContent = 'Remove';
     bookText.append(bookTitle, bookBy, bookAuthor);
-    bookWraper.append(bookText, removeBookBtn)
-    bookDiv.append(bookWraper, lineBreak);
+    bookWraper.append(bookText, removeBookBtn);
+    bookDiv.append(bookWraper);
     bookContainer.appendChild(bookDiv);
     removeBookBtn.addEventListener('click', () => {
       bookDiv.remove();
