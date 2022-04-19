@@ -15,18 +15,15 @@ class Book {
     this.author = author;
   }
 
-  removeBook(index) {
+  removeBook = (index) => {
     booksArr.splice(index, 1);
     localStorage.setItem('books', JSON.stringify(booksArr));
   }
 
-  add(book) {
-    
+  add = (book) => {
     booksArr.push(book);
     localStorage.setItem('books', JSON.stringify(booksArr));
-    render();
   }
-  
 }
 
 const render = () => {
@@ -37,18 +34,18 @@ const render = () => {
   }
   for (let i = 0; i < booksArr.length; i += 1) {
     const bookDiv = document.createElement('div');
-    const bookWraper = document.createElement('div')
+    const bookWraper = document.createElement('div');
     const bookText = document.createElement('div');
     const bookTitle = document.createElement('p');
     const bookBy = document.createElement('p');
     const bookAuthor = document.createElement('p');
     const removeBookBtn = document.createElement('button');
     bookDiv.className = 'book-div';
-    bookWraper.className = 'book-wraper'
+    bookWraper.className = 'book-wraper';
     bookText.className = 'book-text';
     removeBookBtn.className = 'remove-btn';
     bookTitle.textContent = `"${booksArr[i].title}"`;
-    bookBy.textContent = 'by'
+    bookBy.textContent = 'by';
     bookAuthor.textContent = booksArr[i].author;
     removeBookBtn.textContent = 'Remove';
     bookText.append(bookTitle, bookBy, bookAuthor);
@@ -67,4 +64,5 @@ render();
 addBookBtn.addEventListener('click', () => {
   const book = new Book(titleInput.value, authorInput.value);
   book.add(book);
+  render();
 });
