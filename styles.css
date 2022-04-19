@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: linear-gradient(to right, rgb(152, 189, 152), rgb(216, 171, 171));
+}
+
 .title {
   text-align: center;
   font-family: 'Roboto', sans-serif;
