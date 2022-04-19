@@ -14,48 +14,55 @@ class Book {
     this.title = title;
     this.author = author;
   }
-}
 
-function removeBook(index, book) {
-  book.remove();
-  booksArr.splice(index, 1);
-  localStorage.setItem('books', JSON.stringify(booksArr));
+  removeBook = (index) => {
+    booksArr.splice(index, 1);
+    localStorage.setItem('books', JSON.stringify(booksArr));
+  }
+
+  add = (book) => {
+    booksArr.push(book);
+    localStorage.setItem('books', JSON.stringify(booksArr));
+  }
 }
 
 const render = () => {
+  const book = new Book();
   bookContainer.innerHTML = null;
   if (localStorage.getItem('books')) {
     booksArr = JSON.parse(localStorage.getItem('books'));
   }
   for (let i = 0; i < booksArr.length; i += 1) {
     const bookDiv = document.createElement('div');
+    const bookWraper = document.createElement('div');
+    const bookText = document.createElement('div');
     const bookTitle = document.createElement('p');
+    const bookBy = document.createElement('p');
     const bookAuthor = document.createElement('p');
     const removeBookBtn = document.createElement('button');
-    const lineBreak = document.createElement('hr');
-    bookTitle.textContent = booksArr[i].title;
+    bookDiv.className = 'book-div';
+    bookWraper.className = 'book-wraper';
+    bookText.className = 'book-text';
+    removeBookBtn.className = 'remove-btn';
+    bookTitle.textContent = `"${booksArr[i].title}"`;
+    bookBy.textContent = 'by';
     bookAuthor.textContent = booksArr[i].author;
     removeBookBtn.textContent = 'Remove';
-    bookDiv.appendChild(bookTitle);
-    bookDiv.appendChild(bookAuthor);
-    bookDiv.appendChild(removeBookBtn);
-    bookDiv.appendChild(lineBreak);
+    bookText.append(bookTitle, bookBy, bookAuthor);
+    bookWraper.append(bookText, removeBookBtn);
+    bookDiv.append(bookWraper);
     bookContainer.appendChild(bookDiv);
     removeBookBtn.addEventListener('click', () => {
-      removeBook(i, bookDiv);
+      bookDiv.remove();
+      book.removeBook(i);
     });
   }
 };
 
 render();
 
-const add = (title, author) => {
-  const book = new Book(title, author);
-  booksArr.push(book);
-  localStorage.setItem('books', JSON.stringify(booksArr));
-  render();
-};
-
 addBookBtn.addEventListener('click', () => {
-  add(titleInput.value, authorInput.value);
+  const book = new Book(titleInput.value, authorInput.value);
+  book.add(book);
+  render();
 });

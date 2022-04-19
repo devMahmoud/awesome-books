@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, rgb(152, 189, 152), rgb(216, 171, 171));
+}
+
+.title {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.books-container {
+  border: solid 3px black;
+  margin: 1rem;
+}
+
+.book-wraper {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-text {
+  display: flex;
+  gap: 5px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.book-div:nth-child(odd) {
+  background: #ddd;
+}
+
+.new-book-title {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin: 20px 0;
+}
+
+.remove-btn {
+  padding: 5px;
+  box-shadow: 3px 3px black;
+}
+
+.section-devider {
+  width: 15%;
+  margin: auto;
+  border: 2px solid #0a0a0a;
+  border-radius: 3px;
+}
+
+.add-book-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.title-input,
+.author-input {
+  border: solid 4px black;
+  padding: 7px;
+}
+
+.add-book-btn {
+  width: 20%;
+  align-self: flex-end;
+  padding: 5px;
+  box-shadow: 3px 3px black;
+}
