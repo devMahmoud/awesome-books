@@ -8,10 +8,18 @@ body {
   background: linear-gradient(to right, rgb(152, 189, 152), rgb(216, 171, 171));
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin: 0.5rem 1rem;
+}
+
 .menu-container {
   display: flex;
   top: 0;
-  background-color: white;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
@@ -34,13 +42,18 @@ body {
 }
 
 .principal-menu li:hover {
-  color:rgb(152, 189, 152)
+  color:rgb(58, 233, 15)
 }
 
 .middle-nav {
   border-left: solid 2px black;
   border-right: solid 2px black;
   padding: 0 10px;
+}
+
+.date {
+  text-align: right;
+  margin-top: 0.5rem;
 }
 
 .title {
@@ -108,4 +121,24 @@ body {
   align-self: flex-end;
   padding: 5px;
   box-shadow: 3px 3px black;
+}
+
+footer {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  align-self: flex-end;
+}
+
+.footer {
+  display: flex;
+  border: 2px solid black;
+  padding: 15px 20px;
+  align-items: center;
+}
+
+.footer a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #0a0a0a;
+  font-family: 'Pacifico', cursive;
 }
