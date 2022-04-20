@@ -11,6 +11,8 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 header {
@@ -41,8 +43,13 @@ header {
   list-style: none;
 }
 
-.principal-menu li:hover {
-  color:rgb(58, 233, 15)
+.principal-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.principal-menu a:hover {
+  color:rgb(255, 0, 0)
 }
 
 .middle-nav {
@@ -95,13 +102,6 @@ header {
   box-shadow: 3px 3px black;
 }
 
-.section-devider {
-  width: 15%;
-  margin: auto;
-  border: 2px solid #0a0a0a;
-  border-radius: 3px;
-}
-
 .add-book-form {
   display: flex;
   flex-direction: column;
@@ -121,6 +121,30 @@ header {
   align-self: flex-end;
   padding: 5px;
   box-shadow: 3px 3px black;
+}
+
+.contact {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 50px;
+  font-size: 2.3rem;
+}
+
+.contact p {
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.1rem;
+  line-height: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.list {
+  padding: 20px 30px;
+  font-size: 1.3rem;
 }
 
 footer {
