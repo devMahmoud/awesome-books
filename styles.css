@@ -8,6 +8,41 @@ body {
   background: linear-gradient(to right, rgb(152, 189, 152), rgb(216, 171, 171));
 }
 
+.menu-container {
+  display: flex;
+  top: 0;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  width: 100%;
+  border: solid 2px black;
+}
+
+.menu-container h2 {
+  font-family: 'Pacifico', cursive;
+}
+
+.menu-container ul {
+  display: flex;
+  margin-right: 20px;
+  gap: 10px;
+}
+
+.principal-menu li {
+  list-style: none;
+}
+
+.principal-menu li:hover {
+  color:rgb(152, 189, 152)
+}
+
+.middle-nav {
+  border-left: solid 2px black;
+  border-right: solid 2px black;
+  padding: 0 10px;
+}
+
 .title {
   text-align: center;
   font-family: 'Roboto', sans-serif;
