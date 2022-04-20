@@ -2,6 +2,38 @@ const bookContainer = document.querySelector('.books-container');
 const titleInput = document.querySelector('.title-input');
 const authorInput = document.querySelector('.author-input');
 const addBookBtn = document.querySelector('.add-book-btn');
+const bookListLink = document.querySelector('.list-link');
+const addNewBookLink = document.querySelector('.add-book-link');
+const contactInfoLink = document.querySelector('.contact-link');
+const bookList = document.getElementById('list');
+const addNewBook = document.getElementById('add-book');
+const contactInfo = document.getElementById('contact');
+const dateText = document.querySelector('.date');
+
+const d = new Date();
+const date = d.toUTCString();
+dateText.textContent = date;
+
+addNewBook.classList.add('hidden');
+contactInfo.classList.add('hidden');
+
+bookListLink.addEventListener('click', () => {
+  bookList.classList.remove('hidden');
+  addNewBook.classList.add('hidden');
+  contactInfo.classList.add('hidden');
+});
+
+addNewBookLink.addEventListener('click', () => {
+  addNewBook.classList.remove('hidden');
+  bookList.classList.add('hidden');
+  contactInfo.classList.add('hidden');
+});
+
+contactInfoLink.addEventListener('click', () => {
+  bookList.classList.add('hidden');
+  addNewBook.classList.add('hidden');
+  contactInfo.classList.remove('hidden');
+});
 
 let booksArr = [];
 
