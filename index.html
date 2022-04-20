@@ -19,23 +19,24 @@
                 <h2>Awesome Books</h2>
                 <nav class="principal-menu">
                     <ul>
-                        <li><a href="#">List</a></li>
-                        <li class="middle-nav"><a href="#">New</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a class="list-link" href="#list">List</a></li>
+                        <li class="middle-nav"><a class="add-book-link" href="#add-book">New</a></li>
+                        <li><a class="contact-link" href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
             <p class="date"></p>
           </header>
     
-        <h1 class="title">All awesome books</h1>
+        
     
-        <section class="books-container">
-    
+        <section id="list" >
+            <h1 class="title">All awesome books</h1>
+            <div class="books-container"></div>
         </section>
     
     
-        <section class="new-book-container">
+        <section id="add-book" class="new-book-container">
             <h2 class="new-book-title">Add a new book</h2>
             <form class="add-book-form" action="index.html">
                 <input class="title-input" type="text" placeholder="Title">
@@ -44,7 +45,7 @@
             </form>
         </section>
 
-        <section class="contact">
+        <section id="contact" class="contact">
             <h2>Contact Information</h2>
             <p>Do you have any question or you just want to say "Hello"? <br> 
                 You can reach out to us!</p>

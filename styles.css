@@ -48,8 +48,15 @@ header {
   color: black;
 }
 
+.footer a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #0a0a0a;
+  font-family: 'Pacifico', cursive;
+}
+
 .principal-menu a:hover {
-  color:rgb(255, 0, 0)
+  color: rgb(255, 0, 0);
 }
 
 .middle-nav {
@@ -160,9 +167,6 @@ footer {
   align-items: center;
 }
 
-.footer a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: #0a0a0a;
-  font-family: 'Pacifico', cursive;
+.hidden {
+  display: none;
 }
