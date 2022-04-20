@@ -14,6 +14,9 @@ const d = new Date();
 const date = d.toUTCString();
 dateText.textContent = date;
 
+addNewBook.classList.add('hidden');
+contactInfo.classList.add('hidden');
+
 bookListLink.addEventListener('click', () => {
   bookList.classList.remove('hidden');
   addNewBook.classList.add('hidden');
